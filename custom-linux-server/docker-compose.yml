@@ -8,5 +8,5 @@ services:
       - G:\Docker\build\apache-http-server\home:/home
     ports:
       - 8080:80
-    networs:
+    networks:
       - srvnet
