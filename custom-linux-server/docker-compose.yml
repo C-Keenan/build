@@ -1,5 +1,6 @@
 version: '3'
-
+networks:
+  srvnet:
 services:
   custom_linux_server:
     image: therenoth234/custom_linux_server:0.0.1
