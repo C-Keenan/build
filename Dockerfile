@@ -17,7 +17,8 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt autoremove -y
 RUN apt install bash -y
-RUN docker run helloworld
+RUN apt install docker.io docker-compose -y
+RUN sudo docker run helloworld
 
 
 
