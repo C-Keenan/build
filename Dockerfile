@@ -17,7 +17,7 @@ ENV ENVFILES $INST_SCRIPTS/envfiles
 
 
 
-RUN sh $BASH/apt-update.sh
+RUN sh $BASH/apt_update.sh
 
 
 
