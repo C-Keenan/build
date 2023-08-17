@@ -1,12 +1,15 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu:23.10
-RUN mkdir -p /home/root
-RUN mkdir -p /usr/bin
-RUN mkdir -p /etc
+USER root
+RUN mkdir -p /home/root/install/bash
+RUN touch /home/root/install/bash/initiate.sh
+RUN echo '#!/usr/bin/bash' >> /home/root/install/bash/initiate.sh
+RUN echo 'apt update' >> /home/root/install/bash/initiate.sh
+RUN echo 'apt upgrade -y' >> /home/root/install/bash/initiate.sh
+RUN echo 'apt autoremove -y' >> /home/root/install/bash/initiate.sh
+RUN echo 'apt install apache2 -y' >> /home/root/install/bash/initiate.sh
+
 WORKDIR /
 EXPOSE 80
-COPY .\home\root\* /home/root
-COPY .\usr\bin\* /usr/bin
 RUN apt install bash -y
-RUN chmod +x /home/root/initiate.sh
-RUN sh /home/root/initiate.sh
+RUN bash ./home/root/install/bash/initiate.sh
