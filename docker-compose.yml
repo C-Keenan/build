@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  custom_linux_server:
+    image: therenoth234/custom_linux_server:0.0.1
+    container_name: custom_linux_server_1
+    volumes:
+      - G:\Docker\build\apache-http-server\home:/home
+    ports:
+      - 8080:80
+    networs:
+      - srvnet
