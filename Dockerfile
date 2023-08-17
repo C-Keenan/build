@@ -1,30 +1,13 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu:jammy
 RUN mkdir -p /home/root
-WORKDIR /home/root
-CMD 
-USER root 
-
-ENV HOME /home
-ENV USERHOME $HOME/root
-ENV STARTUPDIR $USERHOME
-ENV INST_SCRIPTS $STARTUPDIR/install
-ENV BASH $INST_SCRIPTS/bash
-ENV ENVFILES $INST_SCRIPTS/envfiles
-
-######### Customize Container Here #########
-
-
+WORKDIR /home/root/www
+EXPOSE 80
 RUN apt update
 RUN apt upgrade -y
 RUN apt autoremove -y
 RUN apt install bash -y
-RUN apt install docker.io docker-compose -y
-RUN docker pull hello-world:latest
-RUN docker run -it hello-world
-
-
-
-######### End Customization #########
-
-RUN chown 1000:1000
+RUN apt install systemctl -y
+RUN apt install apche2 -y
+RUN apt install ufw -y
+RUN systemctl start apache2
