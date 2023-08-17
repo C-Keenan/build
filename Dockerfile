@@ -1,5 +1,7 @@
+# syntax=docker/dockerfile:1
 FROM ubuntu:jammy
-
+RUN mkdir -p /home/root
+WORKDIR /home/root
 CMD 
 USER root 
 
