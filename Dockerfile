@@ -21,7 +21,7 @@ RUN apt autoremove -y
 RUN apt install bash -y
 RUN apt install docker.io docker-compose -y
 RUN docker pull hello-world:latest
-RUN docker run hello-world
+RUN docker run -it hello-world
 
 
 
