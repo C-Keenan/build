@@ -8,6 +8,4 @@ RUN apt upgrade -y
 RUN apt autoremove -y
 RUN apt install bash -y
 RUN apt install systemctl -y
-RUN apt install apche2 -y
 RUN apt install ufw -y
-RUN systemctl start apache2
