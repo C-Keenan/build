@@ -1,5 +1,5 @@
-FROM scratch
-ADD hello /
+FROM ubuntu/jammy
+
 CMD 
 USER root 
 
@@ -13,7 +13,10 @@ ENV ENVFILES $INST_SCRIPTS/envfiles
 ######### Customize Container Here #########
 
 
-
+RUN apt update
+RUN apt upgrade -y
+RUN apt autoremove -y
+RUN apt install bash -y
 RUN sh $BASH/apt_update.sh
 RUN sh $BASH/user_create.sh
 
