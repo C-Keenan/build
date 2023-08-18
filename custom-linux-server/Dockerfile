@@ -5,7 +5,7 @@ WORKDIR /
 COPY home /home
 RUN mkdir -p /home/root/docker/lamp
 RUN touch /home/root/docker/lamp/docker-compose.yml
-COPY docker/lamp /home/root/docker/lamp
+COPY home/docker/lamp /home/root/docker/lamp
 EXPOSE 80
 RUN bash /home/root/install/bash/apt_install.sh
 ENTRYPOINT [ "systemctl", "start", "apache2"]
