@@ -4,7 +4,16 @@ apt update
 apt upgrade -y
 apt autoremove -y
 apt install systemctl -y
-apt install apache2 -y
+apt install tasksel -y
+apt install lamp-server -y
+apt install curl -y
+curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+echo 'FROM php:7.4.3-alpine' > php.Dockerfile
+docker-php-ext-install mysqli pdo pdo_mysql
+cd ~/docker/lamp
+touch docker-compose.yml
+
 apt install ufw -y
 mkdir -p /home/root/var/www/html/game-guides-and-how-tos
 mkdir -p /home/root/var/www/html/images
