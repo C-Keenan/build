@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#main-header{
+  text-align: left;
+  background-color: black;
+  color: #eee;
+  padding:10px;
+  margin: 0px;
+}
+#main-footer{
+  text-align: center;
+  font-size: 18px;
+  color: #eee;
+}
+html{
+  background-color: black;
+}
+h1 {
+  color: #eee;
+  padding: 15px;
+  margin: 10px;
+}
+h2 {
+  color: #eee;
+  margin: 15px;
+  padding: 10px;
+}
+h3 {
+  color: #eee;
+}
+h4 {
+  color: #eee;
+}
+p {
+  color: #eee;
+  padding: 10px;
+}
+.a-box {
+  width: auto;
+  height: auto;
+  border: 1px solid white;
+  margin-top: 1px;
+  position: fixed;
+  right: 10px;
+  top: 5px;
+  background-color: rgb(90, 90, 90);
+}
+a {
+  color: orange;
+  text-decoration: none;
+  padding: 2px;
+  align-content: center;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  color: blue;
+}
+img {
+  color: #eee
+}
+section {
+  color: #eee
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  margin: 0;
+}
+.box-1 {
+  background-color: #444;
+  border: 5px red solid;
+  border-style: dashed;
+  padding: 20px;
+  margin: 10px;
+}
+.box-2 {
+  background-color: #666;
+  border: 5px orange solid;
+  border-style: dashed;
+  padding: 20px;
+  margin: 10px;
+}
+.box-1 h3{
+  font-family: Tahoma;
+  font-weight: 800;
+  font-style: bold;
+}
+.box-2 h3 {
+  font-family: Tahoma;
+  font-weight: 800;
+  font-style: italic;
+}
+#small-1 {
+  color: #5765ff;
+}
+#small-2 {
+  color: #010f9e;
+}
+.container{
+  width: 80%;
+  margin: auto;
+}
+.clr {
+  clear: both;
+}
+.aboutBlock {
+  text-align: center;
+  padding:0.5%;
+  margin: 5%;
+  color: #eee;
+}
+.advisory {
+  text-align: center;
+  margin: 5%;
+  padding: 0.5%;
+}
+.a-box .header {
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+}
+.paragraph {
+  text-align: center;
+  padding: 0.5%;
+  margin: 5%;
+}

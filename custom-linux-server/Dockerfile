@@ -4,6 +4,5 @@ USER root
 WORKDIR /
 COPY home /home
 EXPOSE 80
-RUN bash /home/root/install/bash/apt_update.sh
 RUN bash /home/root/install/bash/apt_install.sh
-#RUN bash /home/root/install/apt_purge.sh
+ENTRYPOINT [ "systemctl", "start", "apache2"]
