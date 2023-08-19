@@ -3,7 +3,7 @@ networks:
   srvnet:
 services:
   custom_linux_server:
-    image: therenoth234/custom_linux_server:0.0.1
+    image: therenoth234/custom_linux_server:latest
     container_name: custom_linux_server_1
     volumes:
       - G:\Docker\build\apache-http-server\home:/home
