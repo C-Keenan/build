@@ -4,10 +4,12 @@ USER root
 WORKDIR /
 RUN mkdir -p /home/root/bash
 RUN mkdir -p /home/root/docker
-RUN mkdir -p /home/root/etc/apache2/sites-available
-RUN mkdir /home/root/public-www
+RUN mkdir -p /home/root/public-www
 COPY bash /home/root/bash
 COPY docker /home/root/docker
 COPY etc /home/root/etc
+COPY public-www /home/root/public-www
+RUN bash /home/root/bash/apt_install.sh
 EXPOSE 80
 EXPOSE 443
+CMD ["systemctl", "start", "nginx"]

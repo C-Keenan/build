@@ -4,7 +4,7 @@ apt update
 apt upgrade -y
 apt autoremove -y
 apt install systemctl -y
-apt install apache2 -y
-mkdir -p /home/root/var/www/html
-ln /home/root/var/www/html/index.html /var/www/html/index.html
+apt install nginx -y
+systemctl enable nginx
+mv /home/root/etc/apache2/sites-available/test_nginx.conf /etc/nginx/nginx.conf
 exit
