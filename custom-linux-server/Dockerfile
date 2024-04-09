@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM ubuntu:23.10
+FROM ubuntu:22.04
 USER root
 WORKDIR /
 RUN mkdir -p /home/root/bash
