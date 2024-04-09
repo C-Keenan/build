@@ -4,10 +4,13 @@
 }
 #main-header{
   text-align: left;
-  background-color: black;
+  background-color: #000;
   color: #eee;
   padding:10px;
   margin: 0px;
+}
+#returnLink{
+  margin-left: 5px;
 }
 #main-footer{
   text-align: center;
@@ -126,6 +129,10 @@ body {
 }
 .paragraph {
   text-align: center;
+  padding: 0.5%;
+  margin: 5%;
+}
+.brandImage {
   padding: 0.5%;
   margin: 5%;
 }
