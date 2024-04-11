@@ -1,13 +1,15 @@
-version: '3'
-networks:
-  srvnet:
 services:
   custom_linux_server:
     image: therenoth234/custom_linux_server:latest
     container_name: custom_linux_server_1
     volumes:
-      - G:\Docker\build\apache-http-server\home:/home
+      - ./path/to/your/public/website/data:/home/root/public-www
+      - ./path/to/your/nginx/conf/file:/home/root/etc
+      # Optionally add the scripts directory
+      - ./path/to/your/scripts/directory:/home/root/bash
     ports:
       - 8080:80
     networks:
       - srvnet
+networks:
+  srvnet:
