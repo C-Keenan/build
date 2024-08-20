@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=5.0, user-scalable=yes" />
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+        <link rel="icon" type="image/png" href="/Images/Branding/logo.png" />
+        <title>LollyPopStealer.com</title>
+    </head>
+    <header id="main-header">
+        <a href="https://www.lollypopstealer.com"><img alt="'Brand' logo for lollypopstealer dot com. Contains an image of a green 'star' swirl and a pink and yellow swirl lollipop sourced from pngtree.com" src="/Images/Branding/logo-with-domain-name.png" style="width:400px; height:100px;"></a>
+    </header>
+        <body>
+            <div class="a-box">
+                <h4 class="header">Navigation Menu</h4>
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog Page</a>
+                <a href="images.html">Images</a>
+                <a href="videos.html">Videos</a>
+                <a href="contact.html">Contact Me</a>
+                <a href="about.html">About Page</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="music.html">Music</a>
+                <!--a href="game-guides-and-how-to's.html">Game Guides and How To's</a-->
+            </div>
+            <div class="clr"></div>
+            <div class="box-1">
+                <h3>Game Server Helper</h3>
+                <p>
+                    <h4>Overview</h4>
+
+                    'Game Server Helper' is a linux command-line script interface designed to run various popular game servers such as "Minecraft", "Veloren", "Satisfactory", and "Factorio" by utilizing the 'Docker Compose' program.
+                    
+                    <h4>Installation</h4>
+
+                    If you run the install script it will first ask if you would like to install the command-line scripts, which entails adding an alias to the current user's '.bashrc' file directed to the installation directory `/usr/gsh/script-files/gsh`, it will then copy the 'gsh' folder, which includes the default docker-compose.yml files for the various game servers distributed with the script, into the linux 'usr' directory and then pull the necessary linux packages "docker-ce", "docker-ce-cli", "containerd.io", "docker-buildx-plugin", and "docker-compose-plugin". It then asks you if you would like to test the docker installation, which is not usually necessary, and run the `docker run hello-world` command, which is the 'Docker' test image, to make sure that the installation is up and running correctly. The next step is to check whether or not the system has the required 'colrm' utility utilized by the alias command `gsh factorio down` which checks the factorio 'server-settings.json' file for the autosave interval and runs a timer to allow an autosave to happen so the user does not lose any recent game progress which might occur if the container is brought down immediately which can still be done by running the alias command `gsh factorio down --now`. The installation script will then check to see if the environment directory, used by the donation message function of the script, is in existance on the system and copy the necessary environment files into said directory. There are also default environment files for each of the various game servers that are packaged along-side the script which are necessary for the servers to function as expected by the script that are copied into the respective docker container folders at this point in the script. The script will then print a closing message thanking the user for installing the 'Game Server Helper' script and directing them to provide feature requests to the email address specified in the installation script. The installation script can be run as the 'root' user or a general user with 'sudo' privledges, and should be capable of running on debian linux systems that do not contain the 'sudo' package.
+
+                    If you answer "no" to the installation script asking if you would like to install 'Game Server Helper' then the script will first print a message thanking the user for running the script and mentioning that since they answered "no" the script will now exit and reminding them to "Have a great day!"
+
+                    <h4>Main Script Overview</h4>
+
+                    
+                </p>
+            </div>
+        </body>
+        <footer id="main-footer">
+            <p>&copy; 2022-2024, Lollypopstealer.com</p>
+        </footer>
+    </html>
